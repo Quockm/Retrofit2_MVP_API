@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Retrofit2_MVP_API</string>
+    <string name="App">Amazing Eat</string>
+    <string name="Search">Search Your Receipt</string>
+    <string name="meals_categories">Meals Categories</string>
+    <string name="todo">TODO</string>
+    <string name="amazing_eat">Amazing Eat</string>
+    <string name="skip">Skip</string>
+    <string name="fresh">Fresh</string>
+    <string name="everything">Everything</string>
+    <string name="Content1">Everything you will experience will be absolutely fresh</string>
+    <string name="delivery">Delivery</string>
+    <string name="home">Home</string>
+    <string name="Content2">All you need to do is order your favourite food from your home</string>
+    <string name="easy">Easy</string>
+    <string name="payment">Payment</string>
+    <string name="Content3">Both creadit card and cash on delivery are available for your case</string>
+</resources>

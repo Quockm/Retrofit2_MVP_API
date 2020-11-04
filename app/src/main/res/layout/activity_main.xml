@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Activity.MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#F44336" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="#C3291D"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/Search"
+                android:textColor="#FFFFFF"
+                app:drawableLeftCompat="@drawable/ic_baseline_search_24"
+                app:drawableStartCompat="@drawable/ic_baseline_search_24" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/ViewPaperHeader"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/CardSearch"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            android:overScrollMode="never" />
+
+        <include
+            android:id="@+id/shimmermeal"
+            layout="@layout/item_view_paper_header_simmer" />
+
+        <TextView
+            android:id="@+id/TvCategory"
+            android:layout_below="@id/ViewPaperHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/meals_categories"
+            android:textColor="#F44336"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/TvCategory"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="50dp"
+            android:scrollbars="none" />
+
+        <include
+            android:id="@+id/shimmercategory"
+            layout="@layout/item_recycler_category_shimmer" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="#F44336"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/App" />
+    </RelativeLayout>
+
+</RelativeLayout>
