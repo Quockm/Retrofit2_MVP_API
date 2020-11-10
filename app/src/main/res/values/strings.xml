@@ -15,4 +15,6 @@
     <string name="easy">Easy</string>
     <string name="payment">Payment</string>
     <string name="Content3">Both creadit card and cash on delivery are available for your case</string>
+    <string name="hello">Hello</string>
+    <string name="foodie">Foodie!</string>
 </resources>
