@@ -17,4 +17,6 @@
     <string name="Content3">Both creadit card and cash on delivery are available for your case</string>
     <string name="hello">Hello</string>
     <string name="foodie">Foodie!</string>
+    <string name="pizza">Pizza</string>
+    <string name="burger">Burger</string>
 </resources>

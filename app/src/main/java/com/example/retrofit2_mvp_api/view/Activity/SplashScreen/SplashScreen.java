@@ -1,6 +1,9 @@
 package com.example.retrofit2_mvp_api.view.Activity.SplashScreen;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -15,6 +18,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.retrofit2_mvp_api.R;
+import com.example.retrofit2_mvp_api.view.Activity.DashBoardActivity;
+import com.example.retrofit2_mvp_api.view.Activity.MainActivity.MainActivity;
 import com.example.retrofit2_mvp_api.view.Fragment.OnBoardingFragment1;
 import com.example.retrofit2_mvp_api.view.Fragment.OnBoardingFragment2;
 import com.example.retrofit2_mvp_api.view.Fragment.OnBoardingFragment3;
@@ -29,6 +34,9 @@ public class SplashScreen extends AppCompatActivity implements ISplashView {
     private ScreenSlidePagerAdapter pagerAdapter;
 
     Animation anim;
+
+    private static int SPLASH_TIME_OUT = 5000;
+    SharedPreferences msharedPreferences;
 
 
     @Override
@@ -48,6 +56,25 @@ public class SplashScreen extends AppCompatActivity implements ISplashView {
         logo.animate().translationY(4000).setDuration(1000).setStartDelay(6000);
         appName.animate().translationY(4000).setDuration(1000).setStartDelay(6000);
         lottieAnimationView.animate().translationY(4000).setDuration(1000).setStartDelay(6000);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                msharedPreferences = getSharedPreferences("SharedPreferences",MODE_PRIVATE);
+                boolean isFirstTime = msharedPreferences.getBoolean("firstime",true);
+
+                if(isFirstTime){
+
+                    SharedPreferences.Editor editor = msharedPreferences.edit();
+                    editor.putBoolean("firstime",false);
+                    editor.commit();
+                }else{
+                    Intent intent = new Intent(SplashScreen.this, DashBoardActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        },SPLASH_TIME_OUT);
 
         viewPager = findViewById(R.id.pager);
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
