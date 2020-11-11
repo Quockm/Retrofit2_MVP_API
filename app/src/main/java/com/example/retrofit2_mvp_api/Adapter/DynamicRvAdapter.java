@@ -1,4 +1,4 @@
-package com.example.retrofit2_mvp_api.model;
+package com.example.retrofit2_mvp_api.Adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.retrofit2_mvp_api.R;
-import com.example.retrofit2_mvp_api.model.DRVinterface.LoadMore;
 
 import java.util.List;
 

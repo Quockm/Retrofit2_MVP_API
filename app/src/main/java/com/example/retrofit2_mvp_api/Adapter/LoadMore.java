@@ -1,4 +1,4 @@
-package com.example.retrofit2_mvp_api.model.DRVinterface;
+package com.example.retrofit2_mvp_api.Adapter;
 
 /**
  * Created by QuocKM on 10,November,2020

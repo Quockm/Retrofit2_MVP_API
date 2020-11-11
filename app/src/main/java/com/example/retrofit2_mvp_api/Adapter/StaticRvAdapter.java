@@ -1,4 +1,4 @@
-package com.example.retrofit2_mvp_api.model;
+package com.example.retrofit2_mvp_api.Adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;

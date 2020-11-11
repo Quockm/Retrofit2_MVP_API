@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.retrofit2_mvp_api.R;
-import com.example.retrofit2_mvp_api.model.DRVinterface.LoadMore;
-import com.example.retrofit2_mvp_api.model.DynamicRvAdapter;
-import com.example.retrofit2_mvp_api.model.DynamicRvModel;
-import com.example.retrofit2_mvp_api.model.StaticRvAdapter;
-import com.example.retrofit2_mvp_api.model.StaticRvModel;
+import com.example.retrofit2_mvp_api.Adapter.LoadMore;
+import com.example.retrofit2_mvp_api.Adapter.DynamicRvAdapter;
+import com.example.retrofit2_mvp_api.Adapter.DynamicRvModel;
+import com.example.retrofit2_mvp_api.Adapter.StaticRvAdapter;
+import com.example.retrofit2_mvp_api.Adapter.StaticRvModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,16 +46,16 @@ public class DashBoardActivity extends AppCompatActivity {
         recyclerView.setAdapter(staticRvAdapter);
 
         items.add(new DynamicRvModel("burger"));
+        items.add(new DynamicRvModel("fries"));
+        items.add(new DynamicRvModel("hotdog"));
         items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
-        items.add(new DynamicRvModel("burger"));
+        items.add(new DynamicRvModel("icecream"));
+        items.add(new DynamicRvModel("pizza"));
+        items.add(new DynamicRvModel("hotdog"));
+        items.add(new DynamicRvModel("pizza"));
+        items.add(new DynamicRvModel("fries"));
+        items.add(new DynamicRvModel("fries"));
+        items.add(new DynamicRvModel("hotdog"));
 
         RecyclerView drv = findViewById(R.id.rv_2);
         drv.setLayoutManager(new LinearLayoutManager(this));
